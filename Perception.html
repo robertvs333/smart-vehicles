@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a14d652b86e00f03abd5043129e363d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -156,6 +156,11 @@ window.Quarto = {
   <li><a href="#types-of-analysis" id="toc-types-of-analysis" class="nav-link" data-scroll-target="#types-of-analysis">Types of analysis</a></li>
   <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics">Metrics</a></li>
   </ul></li>
+  <li><a href="#lecture-3-introduction-to-deep-learning" id="toc-lecture-3-introduction-to-deep-learning" class="nav-link" data-scroll-target="#lecture-3-introduction-to-deep-learning">Lecture 3 Introduction to deep learning</a></li>
+  <li><a href="#lecture-4-limitations-of-datasets-object-detection" id="toc-lecture-4-limitations-of-datasets-object-detection" class="nav-link" data-scroll-target="#lecture-4-limitations-of-datasets-object-detection">Lecture 4 Limitations of datasets &amp; object detection</a>
+  <ul class="collapse">
+  <li><a href="#evaluation-metrics" id="toc-evaluation-metrics" class="nav-link" data-scroll-target="#evaluation-metrics">Evaluation metrics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -211,6 +216,79 @@ Rec= \frac{TP}{TP + FN}
 <p>The F1-score is a trade off between precision and recall <span class="math display">\[
 F_1 = \frac{2}{\frac{1}{Rec}+\frac{1}{Prec}}= \frac{2*Rec*Prec}{Rec+Prec} = \frac{2|TP|}{2|TP|+|FP|+|FN|}
 \]</span></p>
+</section>
+</section>
+</section>
+<section id="lecture-3-introduction-to-deep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-3-introduction-to-deep-learning">Lecture 3 Introduction to deep learning</h2>
+<p>When the feature computation and classifier are designed manually this is also called model-based. Which has various problems like occlusions, lighting etc. In deep learning the feature computation and the classifier are trained. It is now data-driven</p>
+<p>Some activation functions are given below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Perception_files/figure-html/c098d286-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>The binary cross entropy loss is given by: <span class="math display">\[
+\lambda = y \cdot log(f(x)) + (1-y) \cdot log(1-f(x))
+\]</span></p>
+<p>Overfitting can be reduced by using L2 Regularization (Frobenius norm), this just the same as ridge idk why it is called like that. <img src="Perception_files/figure-html/b5495105-1-image.png" class="img-fluid" alt="image.png"></p>
+<p>Methods to reduce overfitting are: - Dropout - Regularization - Early stopping</p>
+</section>
+<section id="lecture-4-limitations-of-datasets-object-detection" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-4-limitations-of-datasets-object-detection">Lecture 4 Limitations of datasets &amp; object detection</h2>
+<p>Any dataset always represents a limited view on / only a sample of on the real world and therefore hard to generalize. Therefore partly data augmentation exists, one of these is shearing in which you hold the axis perpendiculr but place the corner of the image in a different position. This way you simulate camera angles and such.</p>
+<p>The pooling operation has the following results: - Promotes dominat features - introduces translational invariance -Suppresses noise - reduces dimensionality</p>
+<p>The softmax function is given as: <span class="math display">\[
+softmax(y)=\frac{e^y}{\sum e^y}
+\]</span></p>
+<p>In detection you want to have the follwing output vector: <img src="Perception_files/figure-html/91e4057c-1-image.png" class="img-fluid" alt="image.png"></p>
+<p>However it is difficult to predict: - different absolute positsions of objects - different shapes (aspect ratio) of objects that may also overlay</p>
+<p>Therefore it is easier to predict an offset in position and size relative to a predefined, reference bounding (anchor) box. So you get:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Perception_files/figure-html/1e30508b-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>Mostly DNN networks contain 3 components: - region proposals - Network predictions using feature extraction - Non-maximum suppressions (cleaning up)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Perception_files/figure-html/19b7292f-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Perception_files/figure-html/d58d4368-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Perception_files/figure-html/1eaa9bdf-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<section id="evaluation-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-metrics">Evaluation metrics</h3>
+<section id="iou" class="level4">
+<h4 class="anchored" data-anchor-id="iou">IoU</h4>
+<p>Intersection over union. <span class="math display">\[
+\text{IoU}(B_P, B_{GT}) = J(B_P, B_{GT}) = \frac{|B_P \cap B_{GT}|}{|B_P \cup B_{GT}|}
+\]</span></p>
+<p>Where: * <strong><span class="math inline">\(B_P\)</span></strong>: Predicted Bounding Box * <strong><span class="math inline">\(B_{GT}\)</span></strong>: Ground Truth Bounding Box * <strong><span class="math inline">\(B_P \cap B_{GT}\)</span></strong>: Area of Overlap (Intersection) * <strong><span class="math inline">\(B_P \cup B_{GT}\)</span></strong>: Area of Encompassed Region (Union)</p>
+</section>
+<section id="average-precision" class="level4">
+<h4 class="anchored" data-anchor-id="average-precision">Average precision</h4>
+<p>this is the area under the precision-recall curve. <span class="math display">\[AP = \int_{r=0}^{1} p(r) \, dr\]</span> in which p(r) is based on the confidence threshold</p>
+</section>
+<section id="mean-average-precision" class="level4">
+<h4 class="anchored" data-anchor-id="mean-average-precision">Mean average precision</h4>
+<p>This is the same as the average precision but now the mean is taken over the classes <span class="math display">\[
+mAP= \frac{1}{K}= \sum^K_{c=1}AP(c)
+\]</span></p>
+<p>You can calculate the mAP for different levels of IoU threshold. Then we get e.g.&nbsp;mAP@0.5, mAP@0.75, which is also noted as <span class="math inline">\(AP_{50}\)</span>. Sometimes mAP is reported as the mean of mAP over different IoU thresholds. mAP@[.50:.95] or mAP@[.50:.05:.95]</p>
 
 
 </section>
