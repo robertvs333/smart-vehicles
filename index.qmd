@@ -1,0 +1,18 @@
+---
+title: "4AT090 Smart Vehicles"
+subtitle: "Academic Period: 2026-Q1"
+listing:
+  contents: "*.ipynb"
+  type: table
+  sort: "title"
+  fields: [title, subtitle]
+  filter-ui: false
+  sort-ui: false
+---
+
+## Course Overview
+Welcome to the lecture notes for **Smart Vehicles**.
+
+The table below lists all available lecture notes and automatically updates when you add new  files to this repository.
+
+## Lecture Notes

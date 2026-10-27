@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "4AT090 Smart Vehicles"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - icon: github
+        href: https://github.com/robertvs333/smart-vehicles
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
