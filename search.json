@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "Sample.html",
+    "href": "Sample.html",
+    "title": "Style Test",
+    "section": "",
+    "text": "NoteBlue Note Test\n\n\n\nIf this box has a dark blue header and light blue body, your styles.css is working correctly.\n\n\n\n\n\n\n\n\nWarningOrange Warning Test\n\n\n\nIf this box has a dark orange header and light orange body, your custom warning style is working correctly."
+  },
+  {
+    "objectID": "Sample.html#testing-custom-styles",
+    "href": "Sample.html#testing-custom-styles",
+    "title": "Style Test",
+    "section": "",
+    "text": "NoteBlue Note Test\n\n\n\nIf this box has a dark blue header and light blue body, your styles.css is working correctly.\n\n\n\n\n\n\n\n\nWarningOrange Warning Test\n\n\n\nIf this box has a dark orange header and light orange body, your custom warning style is working correctly."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "4AT090 Smart Vehicles",
+    "section": "",
+    "text": "Welcome to the lecture notes for Smart Vehicles.\nThe table below lists all available lecture notes and automatically updates when you add new files to this repository."
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "4AT090 Smart Vehicles",
+    "section": "",
+    "text": "Welcome to the lecture notes for Smart Vehicles.\nThe table below lists all available lecture notes and automatically updates when you add new files to this repository."
+  },
+  {
+    "objectID": "index.html#lecture-notes",
+    "href": "index.html#lecture-notes",
+    "title": "4AT090 Smart Vehicles",
+    "section": "Lecture Notes",
+    "text": "Lecture Notes"
+  }
+]
