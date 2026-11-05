@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://robertvs333.github.io/smart-vehicles/Control.html</loc>
+    <lastmod>2026-11-05T12:24:08.483Z</lastmod>
+  </url>
+  <url>
     <loc>https://robertvs333.github.io/smart-vehicles/Sample.html</loc>
-    <lastmod>2026-11-05T12:09:24.673Z</lastmod>
+    <lastmod>2026-11-05T12:24:08.499Z</lastmod>
   </url>
   <url>
     <loc>https://robertvs333.github.io/smart-vehicles/index.html</loc>
-    <lastmod>2026-11-05T12:09:24.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertvs333.github.io/smart-vehicles/vehicle_dynamics.html</loc>
-    <lastmod>2026-11-05T12:09:24.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertvs333.github.io/smart-vehicles/Control.html</loc>
-    <lastmod>2026-11-05T12:09:24.657Z</lastmod>
+    <lastmod>2026-11-05T12:24:08.499Z</lastmod>
   </url>
   <url>
     <loc>https://robertvs333.github.io/smart-vehicles/Perception.html</loc>
-    <lastmod>2026-11-05T12:09:24.673Z</lastmod>
+    <lastmod>2026-11-05T12:24:08.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertvs333.github.io/smart-vehicles/vehicle_dynamics.html</loc>
+    <lastmod>2026-11-05T12:24:08.499Z</lastmod>
   </url>
 </urlset>

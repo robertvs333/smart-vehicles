@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8d3ad9c781c51ccd60b292c95058b2c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-11dfed304549e7d9db55013033367f26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,9 +86,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -218,14 +218,62 @@ window.Quarto = {
 </section>
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Subtitle</th>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Subtitle
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1793881448483" data-listing-reading-time-sort="3" data-listing-word-count-sort="427" data-listing-title-sort="Control" data-listing-filename-sort="Control.ipynb">
+<td>
+<a href="./Control.html" class="title listing-title">Control</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1793881448499" data-listing-reading-time-sort="4" data-listing-word-count-sort="781" data-listing-title-sort="Perception" data-listing-filename-sort="Perception.ipynb">
+<td>
+<a href="./Perception.html" class="title listing-title">Perception</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1793881448499" data-listing-reading-time-sort="1" data-listing-word-count-sort="44" data-listing-title-sort="Style Test" data-listing-filename-sort="Sample.ipynb">
+<td>
+<a href="./Sample.html" class="title listing-title">Style Test</a>
+</td>
+<td>
+<span class="listing-subtitle">Verifying CSS Callouts</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1793881448499" data-listing-reading-time-sort="4" data-listing-word-count-sort="752" data-listing-title-sort="Vehicle dynamics" data-listing-filename-sort="vehicle_dynamics.qmd">
+<td>
+<a href="./vehicle_dynamics.html" class="title listing-title">Vehicle dynamics</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
