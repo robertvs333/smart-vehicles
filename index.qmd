@@ -3,8 +3,8 @@ title: "4AT090 Smart Vehicles"
 subtitle: "Academic Period: 2026-Q1"
 listing:
   contents: 
-    -"*.ipynb"
-    -"*.qmd"
+    - "*.ipynb"
+    - "*.qmd"
   type: table
   sort: "title"
   fields: [title, subtitle]
